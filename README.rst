@@ -16,7 +16,7 @@ Download or clone the repository, and from inside the root folder::
   
 Or, use pip::
 
-  $ pip install -e https://bitbucket.org/schinckel/django-uuidfield#egg=django-uuidfield
+  $ pip install -e hg+https://bitbucket.org/schinckel/django-uuidfield#egg=django-uuidfield
 
 Even better, do this from inside your virtualenv.
 
