@@ -31,7 +31,7 @@ class UUIDField(models.CharField):
         if not value and self.auto:
             value = uuid.uuid4().hex
             setattr(model_instance, self.attname, value)
-        return super(UUIDField, self).pre_save(model_instance, value, add)
+        return super(UUIDField, self).pre_save(model_instance, add)
     
     def to_python(self, value):
         if not value:
