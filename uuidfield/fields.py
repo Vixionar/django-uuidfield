@@ -14,7 +14,7 @@ class UUIDField(models.CharField):
         
         self.auto = auto
         
-        kwargs['max_length'] = 32
+        kwargs['max_length'] = 36
         if auto:
             kwargs['editable'] = False
             kwargs['blank'] = True
@@ -36,10 +36,9 @@ class UUIDField(models.CharField):
     def to_python(self, value):
         if not value:
             return None
-        if len(value) != 32:
-            value = value.replace('-', '')
-        assert len(value) == 32
-        return value
+        if isinstance(value, uuid.UUID):
+            return value.hex
+        return uuid.UUID(value).hex
     
     
     def value_to_string(self, obj):
