@@ -45,3 +45,8 @@ The following arguments can be passed to the UUIDField:
   
   * ``auto`` - a boolean value as to if values should be generated
     automatically.
+    
+
+Changes
+--------
+0.6.1: Treat the deprecation warning from django 1.3+

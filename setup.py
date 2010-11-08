@@ -2,7 +2,7 @@ from distutils.core import setup
 
 setup(
     name = "uuidfield",
-    version = "0.6",
+    version = "0.6.1",
     description = "JSONField for django models",
     url = "http://bitbucket.org/schinckel/django-uuidfield/",
     author = "Matthew Schinckel",
