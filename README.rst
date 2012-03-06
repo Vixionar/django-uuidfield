@@ -44,11 +44,14 @@ Advanced use
 The following arguments can be passed to the UUIDField:
   
   * ``auto`` - a boolean value as to if values should be generated
-    automatically.
+    automatically. These values are created using uuid.uuid4().
     
 
 Changes
 --------
+
+0.6.5: Remove the creation of a "default" in a south migration when it has been set.
+       See http://south.aeracode.org/ticket/295#comment:8
 
 0.6.4: Raise a ValidationError on a badly formed UUID string, rather than ValueError, in ``UUIDField.clean``.
 
