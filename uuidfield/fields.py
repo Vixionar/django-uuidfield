@@ -69,6 +69,7 @@ else:
             [],         # Positional arguments (not used)
             {           # Keyword argument
                 "auto": ["auto", {"default": "False"}],
+                "default": ["default", {"ignore_if": "default"}],
             },
         ),
-    ], ["^uuidfield\.fields\.UUIDField"]) # XXX Change this to where yours is stored. Better solution?
+    ], ["^uuidfield\.fields\.UUIDField"])
