@@ -49,4 +49,7 @@ The following arguments can be passed to the UUIDField:
 
 Changes
 --------
+
+0.6.4: Raise a ValidationError on a badly formed UUID string, rather than ValueError, in ``UUIDField.clean``.
+
 0.6.1: Treat the deprecation warning from django 1.3+

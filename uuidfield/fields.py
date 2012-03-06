@@ -1,3 +1,4 @@
+from django.core.validators import RegexValidator
 from django.forms.util import ValidationError
 from django import forms
 from django.db import models
@@ -49,6 +50,14 @@ class UUIDField(models.CharField):
             data = unicode(val)
         return data
     
+    def clean(self, value, initial=None):
+        if isinstance(value, uuid.UUID):
+            return value
+        try:
+            return uuid.UUID(value)
+        except ValueError, arg:
+            raise forms.ValidationError(arg.args[0])
+        
 try:
     from south.modelsinspector import add_introspection_rules
 except ImportError:
