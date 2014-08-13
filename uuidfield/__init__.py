@@ -1,2 +1,2 @@
-from fields import UUIDField
-import surlex_macro
+from .fields import UUIDField
+from . import surlex_macro
