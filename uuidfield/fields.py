@@ -17,9 +17,6 @@ class UUIDField(models.CharField):
 
         super(UUIDField, self).__init__(*args, **kwargs)
 
-    def db_type(self, connection=None):
-        return 'uuid'
-
     def pre_save(self, model_instance, add):
         value = getattr(model_instance, self.attname, None)
         if not value and self.auto:
