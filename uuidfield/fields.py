@@ -11,9 +11,6 @@ import uuid
 class UUIDField(models.CharField):
 
     def __init__(self, auto=False, *args, **kwargs):
-        if kwargs.get('primary_key', False):
-            assert auto, _("Must pass auto=True when using UUIDField as primary key")
-
         self.auto = auto
 
         kwargs['max_length'] = 36
