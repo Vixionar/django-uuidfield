@@ -4,6 +4,7 @@ django-uuidfield
 There are a few UUID fields floating around out on the interwebs.
 
 Here is one packaged up as a pip installable one. It is mostly based on
+https://github.com/frej/fast-export.git, which is based on 
 http://gist.github.com/374662, but has some changes, and will get some
 unit tests.
 
