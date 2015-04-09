@@ -17,10 +17,6 @@ class UUIDField(models.CharField):
         self.auto = auto
 
         kwargs['max_length'] = 36
-        if auto:
-            kwargs['editable'] = False
-            kwargs['blank'] = True
-            kwargs['null'] = True
 
         super(UUIDField, self).__init__(*args, **kwargs)
 
